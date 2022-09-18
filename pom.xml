@@ -53,6 +53,7 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
+
             <!--
                 SpringCloud中使用Nacos步骤
                     1.父工程导入spring-cloud-alilbaba的管理依赖：

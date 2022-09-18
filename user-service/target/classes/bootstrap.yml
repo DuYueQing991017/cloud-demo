@@ -1,0 +1,11 @@
+#引导文件为拉取nacos远程配置准备  ,拼接 userServer-dev.yaml
+spring:
+  application:
+    name: userServer  #项目注册名称|服务名称
+  profiles:
+    active: dev #环境,开发环境这是李dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848 #Nacos地址
+      config:
+        file-extension: yaml  #远程配置文件后缀

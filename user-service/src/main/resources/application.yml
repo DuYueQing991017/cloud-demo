@@ -1,0 +1,32 @@
+server:
+  port: 8081  #端口号
+spring:
+  datasource: #数据源配置
+    url: jdbc:mysql://82.157.31.31:3306/cloud-user?useSSL=false
+    username: root
+    password: Root.2022
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+#      server-addr: localhost:8848 #配置Nacos注册中心地址,注册相应服务
+#      discovery:
+#        cluster-name: NJ  #集群名称,只是区分不同的集群,访问还是会访问到不同的集群实现负载均衡
+#        namespace: daab179c-3853-4cef-819d-0cd65abf334e #命名空间(环境隔离)
+  servlet:
+    multipart:
+      max-file-size: 2MB  #文件上传文件的最大大小
+  resources:
+    static-locations: /img  #静态文件访问
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    cn.itcast: debug
+
+##2.Eureka配置对应的注册中心
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka/
